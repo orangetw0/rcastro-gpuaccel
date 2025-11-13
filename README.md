@@ -122,7 +122,7 @@ The script will:
    - Build tools (gcc, g++, make)
    - Download utilities (wget, curl)
 
-3. **Install CUDA Toolkit 11.8**
+3. **Install CUDA Toolkit 12.8**
    - Downloads and installs CUDA 12.8.0
    - Configures environment variables
    - Creates symbolic links
@@ -270,14 +270,6 @@ echo $CUDA_HOME
 echo $PATH | grep cuda
 ```
 
-### GPU Memory Errors
-
-If you get "out of memory" errors:
-
-1. **Use Lite AI Models**: In RC Astro tools, select "AI Lite" versions
-2. **Close Other GPU Applications**: Free up GPU memory
-3. **Process Smaller Images**: Or use CPU for very large images
-
 ### Nouveau Driver Conflicts
 
 If you see nouveau driver errors:
@@ -387,7 +379,7 @@ CUDA_URL="..."          # Update URL
 A: No, this installs CUDA to a versioned directory (`cuda-12.8`) alongside any existing CUDA installations.
 
 **Q: Can I use this with AMD GPUs?**  
-A: No, this script is specifically for NVIDIA GPUs. AMD requires ROCm and different TensorFlow builds.
+A: No, this script is specifically for NVIDIA GPUs.
 
 **Q: Do I need to reinstall after PixInsight updates?**  
 A: Yes, PixInsight updates replace library files. Simply re-run the configuration step.
@@ -400,9 +392,6 @@ A: Yes, all original files are backed up and can be restored at any time.
 
 **Q: What if I have multiple GPUs?**  
 A: CUDA will automatically use the first available GPU. To select a specific GPU, set `CUDA_VISIBLE_DEVICES` environment variable.
-
-**Q: Does this work on Ubuntu 20.04?**  
-A: Potentially, but Ubuntu 22.04+ is recommended for best compatibility.
 
 ## Credits and References
 
