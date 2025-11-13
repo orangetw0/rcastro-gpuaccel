@@ -358,36 +358,6 @@ sudo mv /opt/PixInsight/bin/lib/libtensorflow* /opt/PixInsight/bin/lib/original_
 # Restart PixInsight
 ```
 
-## Performance Expectations
-
-### Typical Speed Improvements
-
-| Tool | CPU Time | GPU Time | Speedup |
-|------|----------|----------|---------|
-| StarXTerminator | 10-15 min | 30-60 sec | 10-20x |
-| NoiseXTerminator | 15-20 min | 1-2 min | 10-15x |
-| BlurXTerminator | 20-30 min | 2-3 min | 10-15x |
-
-*Times are approximate for a 24MP image on RTX 3060*
-
-### Factors Affecting Performance
-- GPU model (newer = faster)
-- GPU memory (more = can handle larger images)
-- Image size (larger = longer processing)
-- AI model version (full vs lite)
-
-## Compatibility Notes
-
-### Tested Configurations
-- ✅ Ubuntu 22.04 LTS + NVIDIA RTX 2060/3060/4060
-- ✅ Kubuntu 22.04 LTS + NVIDIA GTX 1660 Super
-- ✅ Ubuntu 24.04 LTS + NVIDIA RTX Series
-
-### Known Issues
-- **WSL2**: This script is for native Linux installations. WSL2 requires different setup.
-- **AMD GPUs**: This script is NVIDIA-only. AMD users need ROCm-based TensorFlow.
-- **Older GPUs**: GPUs with compute capability < 3.5 not supported by CUDA 12.8
-
 ## Advanced Configuration
 
 ### Custom Installation Paths
